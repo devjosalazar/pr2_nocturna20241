@@ -1,6 +1,6 @@
-package co.edu.uniquindio.programacion2.model;
+package co.edu.uniquindio.programacion2.empresaTransporte.model;
 
-public class Vehiculo {
+public abstract class Vehiculo {
     private String placa;
     private String modelo;
     private String marca;
@@ -46,6 +46,12 @@ public class Vehiculo {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+
+
+    public void encender(){
+        System.out.println("Encendiendo mi vehiculo");
     }
 
     @Override
