@@ -10,7 +10,7 @@ public class Asociado {
     private String numeroCelular;
     private Vehiculo vehiculo;
 
-    private List<Vehiculo> listaVehiculosAsociados = new ArrayList<>();
+    private List<VehiculoCarga> listaVehiculosAsociados = new ArrayList<>();
 
     public Asociado() {
     }
@@ -61,5 +61,13 @@ public class Asociado {
 
     public void setVehiculo(Vehiculo vehiculo) {
         this.vehiculo = vehiculo;
+    }
+
+    public List<VehiculoCarga> getListaVehiculosAsociados() {
+        return listaVehiculosAsociados;
+    }
+
+    public void setListaVehiculosAsociados(List<VehiculoCarga> listaVehiculosAsociados) {
+        this.listaVehiculosAsociados = listaVehiculosAsociados;
     }
 }

@@ -1,9 +1,6 @@
 package co.edu.uniquindio.programacion2.empresaTransporte;
 
-import co.edu.uniquindio.programacion2.empresaTransporte.model.Asociado;
-import co.edu.uniquindio.programacion2.empresaTransporte.model.Vehiculo;
-import co.edu.uniquindio.programacion2.empresaTransporte.model.VehiculoCarga;
-import co.edu.uniquindio.programacion2.empresaTransporte.model.VehiculoPasajero;
+import co.edu.uniquindio.programacion2.empresaTransporte.model.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +9,69 @@ public class MainTransporte {
     public static void main(String[] args) {
 //        asociarVehiculo();
 //        calcultarTotalPasajeros();
+//        encenderVehiculos();
 
-        encenderVehiculos();
+        EmpresaTransporte empresaTransporte = inicializarDatos();
+        int ejes = 5;
+        mostrarVehiculosCargaMayorEje(empresaTransporte, ejes);
 
 
+
+
+    }
+
+    private static void mostrarVehiculosCargaMayorEje(EmpresaTransporte empresaTransporte,
+                                                       int ejes) {
+        for (Asociado asociado: empresaTransporte.getListaAsociados()) {
+            for (VehiculoCarga vehiculo: asociado.getListaVehiculosAsociados()) {
+                if(vehiculo.getNumeroEjes() >= ejes){
+                    System.out.println(vehiculo.toString());
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+    private static EmpresaTransporte inicializarDatos() {
+        EmpresaTransporte empresaTransporte = new EmpresaTransporte();
+        Asociado asociado = new Asociado();
+        asociado.setNombre("Pedro");
+        Asociado asociad2 = new Asociado();
+        asociad2.setNombre("Ana");
+
+        VehiculoCarga vehiculoCarga1 = new VehiculoCarga();
+        vehiculoCarga1.setPlaca("RRD098");
+        vehiculoCarga1.setNumeroEjes(5);
+
+        VehiculoCarga vehiculoCarga2 = new VehiculoCarga();
+        vehiculoCarga2.setPlaca("XXX096");
+        vehiculoCarga2.setNumeroEjes(3);
+
+        VehiculoCarga vehiculoCarga3 = new VehiculoCarga();
+        vehiculoCarga3.setPlaca("77X096");
+        vehiculoCarga3.setNumeroEjes(5);
+
+        asociado.setVehiculo(vehiculoCarga1);
+        asociado.getListaVehiculosAsociados().add(vehiculoCarga2);
+        asociado.getListaVehiculosAsociados().add(vehiculoCarga3);
+
+        asociad2.setVehiculo(vehiculoCarga2);
+
+        empresaTransporte.getListaAsociados().add(asociado);
+        empresaTransporte.getListaAsociados().add(asociad2);
+
+        empresaTransporte.getListaVehiculosCarga().add(vehiculoCarga1);
+        empresaTransporte.getListaVehiculosCarga().add(vehiculoCarga2);
+        empresaTransporte.getListaVehiculosCarga().add(vehiculoCarga3);
+
+        return empresaTransporte;
     }
 
     private static void encenderVehiculos() {
