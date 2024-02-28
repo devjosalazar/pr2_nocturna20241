@@ -11,11 +11,8 @@ public class MainCliente {
 
     private static void ejemplo1() {
         Cliente cliente1 = Cliente.builder()
-                .cedula("1094")
-                .email("ariuas@gmail.com")
-                .telefonoCelular("3147888")
-                .telefonoFijo("606755")
-                .direccion("armenia")
+                .nombre("juan")
+                .apellido("arias")
                 .build();
 
 

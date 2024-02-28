@@ -25,49 +25,28 @@ public class ReservaDeViaje {
         return fechaSalida;
     }
 
-    public void setFechaSalida(LocalDateTime fechaSalida) {
-        this.fechaSalida = fechaSalida;
-    }
 
     public int getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(int duracion) {
-        this.duracion = duracion;
-    }
 
-    public String getTipoAlojamiento() {
-        return tipoAlojamiento;
-    }
 
-    public void setTipoAlojamiento(String tipoAlojamiento) {
-        this.tipoAlojamiento = tipoAlojamiento;
-    }
 
     public TipoTransporte getTransporte() {
         return transporte;
     }
 
-    public void setTransporte(TipoTransporte transporte) {
-        this.transporte = transporte;
-    }
 
     public List<String> getActividades() {
         return actividades;
     }
 
-    public void setActividades(List<String> actividades) {
-        this.actividades = actividades;
-    }
 
     public String getDietaEspecial() {
         return dietaEspecial;
     }
 
-    public void setDietaEspecial(String dietaEspecial) {
-        this.dietaEspecial = dietaEspecial;
-    }
 
     public static ReservaDeViajeBuilder builder(){
         return new ReservaDeViajeBuilder();
