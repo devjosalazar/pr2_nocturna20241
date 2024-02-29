@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>co.edu.uniquindio.pr2.fx.pr2fx/co.edu.uniquindio.pr2.fx.pr2fx.HelloApplication
+                            <mainClass>co.edu.uniquindio.pr2.fx.pr2fx/co.edu.uniquindio.pr2.fx.pr2fx.AppApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
